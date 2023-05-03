@@ -5,6 +5,8 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Pinecone
 import pinecone
 
+from consts import INDEX_NAME
+
 pinecone.init(
     api_key=os.environ["PINECONE_API_KEY"],
     environment=os.environ["PINECONE_ENVIRONMENT_REGION"],
@@ -25,9 +27,10 @@ def ingest_docs() -> None:
     print(f"Going to insert {len(documents)} to Pinecone")
     embeddings = OpenAIEmbeddings(disallowed_special=())
     Pinecone.from_documents(
-        documents=documents, embedding=embeddings, index_name="multiple-pdf-chatbot"
+        documents=documents, embedding=embeddings, index_name=INDEX_NAME
     )
     print("Added to Pinecone vectorstore vectors")
+
 
 if __name__ == "__main__":
     ingest_docs()
