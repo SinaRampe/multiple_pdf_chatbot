@@ -32,5 +32,6 @@ def run_llm(query: str, chat_history: List[Dict[str, Any]] = []):
 
     return qa({"question": query, "chat_history": chat_history})
 
+
 if __name__ == "__main__":
     print(run_llm(query="What has a parrot to do with NLP?"))
