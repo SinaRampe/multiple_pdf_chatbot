@@ -1,6 +1,6 @@
 # LangChain Question Answering Web Application
 
-This web application uses ideas and code from the [LangChain - Develop LLM powered applications with LangChain](https://www.udemy.com/course/langchain/) Udemy course. It answers questions about LangChain based on official documentation sources, and uses Pinecone as a vectorstore.
+This web application uses ideas and code from the [LangChain - Develop LLM powered applications with LangChain](https://www.udemy.com/course/langchain/) Udemy course, with some adjustments made to the code.. It answers questions about LangChain based on official documentation sources, and uses Pinecone as a vectorstore.
 
 ## Environment Variables
 
