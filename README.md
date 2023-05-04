@@ -30,7 +30,7 @@ To run the application locally, follow these steps:
 
 6. Create a new index in Pinecone with the following settings:
 
-   - Name: Replace `INDEX_NAME` in `const.py` with your chosen name for the index.
+   - Index name: give it a pragmatic name
    - Dimension: `1536`
    - Distance: `euclidean`
 
@@ -41,14 +41,6 @@ To run the application locally, follow these steps:
    - `PINECONE_API_KEY`
    - `PINECONE_ENVIRONMENT_REGION`
    - `OPENAI_API_KEY`
-
-   You can create a `.env` file in the root directory of the project and add the variables in the following format:
-
-   ```
-   PINECONE_API_KEY=<your_key>
-   PINECONE_ENVIRONMENT_REGION=<your_region>
-   OPENAI_API_KEY=<your_key>
-   ```
 
 9. Run the application:
 
