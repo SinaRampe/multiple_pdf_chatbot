@@ -1,5 +1,5 @@
 tbd/identified problems: 
-- current chain returns only 4 text blocks, which is suboptimal for some UCs, e.g. searching and Q&A of receipts, update readme 
+- current chain returns only 4 text blocks, which is suboptimal for some UCs, e.g. searching and Q&A of receipts
 - add pypdf, tiktoken to requirements accordingly
 - include run ingestion.py 
 - further readme testing
