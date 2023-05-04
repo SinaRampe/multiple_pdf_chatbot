@@ -1,6 +1,7 @@
+tbd: update readme - add pypdf, tiktoken to requirements accordingly, include run ingestion.py & further readme testing, containerization
 # LangChain Question Answering Web Application
 
-This web application uses ideas and code from the [LangChain - Develop LLM powered applications with LangChain](https://www.udemy.com/course/langchain/) Udemy course, with some adjustments made to the code. It answers questions about about your pdfs, and uses Pinecone as a vectorstore.
+This web application uses ideas and code from the [LangChain - Develop LLM powered applications with LangChain](https://www.udemy.com/course/langchain/) Udemy course, with some adjustments made to the code. It answers questions about your PDFs, and uses Pinecone as a vectorstore.
 
 ## Run Locally
 
@@ -12,42 +13,96 @@ To run the application locally, follow these steps:
    git clone https://github.com/SinaRampe/multiple_pdf_chatbot.git
    ```
 
-2. Go to the project directory:
+2. Create a new conda environment for the project with Python 3.10:
+
+   ```
+   conda create --name langchain-qa python=3.10
+   ```
+
+   Activate the environment:
+
+   ```
+   conda activate langchain-qa
+   ```
+
+3. Go to the project directory:
 
    ```
    cd multiple_pdf_chatbot
    ```
 
-3. Install the required Python packages:
+4. Install the required Python packages:
 
    ```
    pip install -r requirements.txt
    ```
 
-4. Create a `data` directory and put your PDFs in it.
+5. Create a `data` directory and put your PDFs in it.
 
-5. Set the following environment variables in your `.env` file:
+6. If you haven't already, create a Pinecone account at [https://www.pinecone.io/](https://www.pinecone.io/).
 
-   - `PINECONE_API_KEY`
-   - `PINECONE_ENVIRONMENT_REGION`
-   - `OPENAI_API_KEY`
+7. Create a new index in Pinecone with the following settings:
 
-   You can create a `.env` file in the root directory of the project and add the variables in the following format:
+   - Index name: give it a pragmatic name
+   - Dimension: `1536`
+   - Distance: `euclidean`
 
-   ```
-   PINECONE_API_KEY=<your_key>
-   PINECONE_ENVIRONMENT_REGION=<your_region>
-   OPENAI_API_KEY=<your_key>
-   ```
+8. Update `INDEX_NAME` in `consts.py` with your Pinecone Index Name.
 
-   You also need to replace `INDEX_NAME` in `const.py` with your Pinecone Index Name.
+9. If you haven't already, create an OpenAI account at [https://openai.com/](https://openai.com/).
 
-6. Run the application:
+10. Create an OpenAI API key by following these steps:
 
-   ```
-   python app.py
-   ```
+    - Go to [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)
+    - Click on the "Generate New API Key" button
+    - Copy the generated API key
+
+11. Create a `.env` file in the root directory of the project with the following content:
+
+    ```
+    PINECONE_API_KEY=<your pinecone api key>
+    PINECONE_ENVIRONMENT_REGION=<your pinecone environment region>
+    OPENAI_API_KEY=<your openai api key>
+    ```
+
+    Replace `<your pinecone api key>`, `<your pinecone environment region>`, and `<your openai api key>` with the respective values.
+
+    After creating the `.env` file, reactivate the environment:
+
+    ```
+    conda deactivate
+    conda activate langchain-qa
+    ```
+
+    You can confirm that the environment variables are set correctly by running the following commands:
+
+    ```
+    echo $PINECONE_API_KEY
+    echo $PINECONE_ENVIRONMENT_REGION
+    echo $OPENAI_API_KEY
+    ```
+
+12. The user may change the chat model in `backend/retrieval_qa_chain.py` by changing the following code:
+
+    ```
+    chat = ChatOpenAI(
+            temperature=0,
+            model_name="gpt-4"
+    )
+    ```
+
+    The `temperature` parameter controls the randomness of the responses. Higher values result in more random and surprising responses. Other parameters that may be changed include `max_tokens` (maximum length of the response), `stop` (stop sequence for the response generation), and `frequency`.
+
+13. Run the application:
+
+    ```
+    streamlit run main.py
+    ```
 
 ## Application Screenshot
 
 ![Application Screenshot](https://github.com/SinaRampe/multiple_pdf_chatbot/blob/main/pics/app.png)
+
+## TBD (Backlog)
+
+- The PyPDFLoader class from document_loaders can load PDFs and split them into a list of documents, where each document contains the page content and metadata with the page number. Add functionality to display the page number in the source.
