@@ -34,7 +34,9 @@ To run the application locally, follow these steps:
    - Dimension: `1536`
    - Distance: `euclidean`
 
-7. Set the following environment variables in your `.env` file:
+7. Update `INDEX_NAME` in `const.py` with your Pinecone Index Name.
+
+8. Set the following environment variables in your `.env` file:
 
    - `PINECONE_API_KEY`
    - `PINECONE_ENVIRONMENT_REGION`
@@ -48,9 +50,7 @@ To run the application locally, follow these steps:
    OPENAI_API_KEY=<your_key>
    ```
 
-   You also need to replace `INDEX_NAME` in `const.py` with your Pinecone Index Name.
-
-8. Run the application:
+9. Run the application:
 
    ```
    python app.py
