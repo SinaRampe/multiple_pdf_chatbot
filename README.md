@@ -62,14 +62,6 @@ To run the application locally, follow these steps:
     - `PINECONE_ENVIRONMENT_REGION`
     - `OPENAI_API_KEY`
 
-    You can create a `.env` file in the root directory of the project and add the variables in the following format:
-
-    ```
-    PINECONE_API_KEY=<your_key>
-    PINECONE_ENVIRONMENT_REGION=<your_region>
-    OPENAI_API_KEY=<your_key>
-    ```
-
     After setting the environment variables, reactivate the environment:
 
     ```
@@ -88,7 +80,7 @@ To run the application locally, follow these steps:
 12. Run the application:
 
     ```
-    python app.py
+    streamlit run main.py
     ```
 
 ## Application Screenshot
