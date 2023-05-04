@@ -56,13 +56,17 @@ To run the application locally, follow these steps:
     - Click on the "Generate New API Key" button
     - Copy the generated API key
 
-11. Set the following environment variables in your `.env` file:
+11. Create a `.env` file in the root directory of the project with the following content:
 
-    - `PINECONE_API_KEY`
-    - `PINECONE_ENVIRONMENT_REGION`
-    - `OPENAI_API_KEY`
+    ```
+    PINECONE_API_KEY=<your pinecone api key>
+    PINECONE_ENVIRONMENT_REGION=<your pinecone environment region>
+    OPENAI_API_KEY=<your openai api key>
+    ```
 
-    After setting the environment variables, reactivate the environment:
+    Replace `<your pinecone api key>`, `<your pinecone environment region>`, and `<your openai api key>` with the respective values.
+
+    After creating the `.env` file, reactivate the environment:
 
     ```
     conda deactivate
@@ -77,7 +81,7 @@ To run the application locally, follow these steps:
     echo $OPENAI_API_KEY
     ```
 
-    The user may change the chat model in `backend/retrieval_qa_chain.py` by changing the following code:
+12. The user may change the chat model in `backend/retrieval_qa_chain.py` by changing the following code:
 
     ```
     chat = ChatOpenAI(
@@ -86,9 +90,9 @@ To run the application locally, follow these steps:
     )
     ```
 
-    The `temperature` parameter controls the randomness of the responses. Higher values result in more random and surprising responses. If you don't have access to the GPT-4 API, it's recommended to modify the model_name to "gpt-3.5-turbo". Although GPT-4 is more intelligent than GPT-3.5, and can handle longer prompts and conversations while making fewer factual errors, it has hourly prompt restrictions. On the other hand, GPT-3.5 is faster in generating responses and doesn't have these restrictions.`.
+    The `temperature` parameter controls the randomness of the responses. Higher values result in more random and surprising responses. Other parameters that may be changed include `max_tokens` (maximum length of the response), `stop` (stop sequence for the response generation), and `frequency`.
 
-12. Run the application:
+13. Run the application:
 
     ```
     streamlit run main.py
