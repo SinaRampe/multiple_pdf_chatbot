@@ -60,11 +60,11 @@ To run the application locally, follow these steps:
 
     ```
     PINECONE_API_KEY=<your pinecone api key>
-    PINECONE_ENVIRONMENT_REGION=<your pinecone environment>
+    PINECONE_ENVIRONMENT_REGION=<your pinecone environment region>
     OPENAI_API_KEY=<your openai api key>
     ```
 
-    Replace `<your pinecone api key>`, `<your pinecone environment>` (The environment region, it´s "asia-northeast1-gcp" in my case.), and `<your openai api key>` with the respective values.
+    Replace `<your pinecone api key>`, `<your pinecone environment region>`, and `<your openai api key>` with the respective values.
 
     After creating the `.env` file, reactivate the environment:
 
@@ -81,7 +81,7 @@ To run the application locally, follow these steps:
     echo $OPENAI_API_KEY
     ```
 
-12. You can change the chat model in `backend/retrieval_qa_chain.py` by changing the following code:
+12. The user may change the chat model in `backend/retrieval_qa_chain.py` by changing the following code:
 
     ```
     chat = ChatOpenAI(
@@ -90,7 +90,7 @@ To run the application locally, follow these steps:
     )
     ```
 
-    The `temperature` parameter controls the randomness of the responses. Higher values result in more random and surprising responses. If you don't have access to the GPT-4 API, it's recommended to modify the model_name to "gpt-3.5-turbo". Although GPT-4 is more intelligent than GPT-3.5, and can handle longer prompts and conversations while making fewer factual errors, it has hourly prompt restrictions. On the other hand, GPT-3.5 is faster in generating responses and doesn't have these restrictions.`.
+    The `temperature` parameter controls the randomness of the responses. Higher values result in more random and surprising responses. Other parameters that may be changed include `max_tokens` (maximum length of the response), `stop` (stop sequence for the response generation), and `frequency`.
 
 13. Run the application:
 
@@ -101,3 +101,7 @@ To run the application locally, follow these steps:
 ## Application Screenshot
 
 ![Application Screenshot](https://github.com/SinaRampe/multiple_pdf_chatbot/blob/main/pics/app.png)
+
+## TBD (Backlog)
+
+- The PyPDFLoader class from document_loaders can load PDFs and split them into a list of documents, where each document contains the page content and metadata with the page number. Add functionality to display the page number in the source.
