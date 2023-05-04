@@ -1,6 +1,6 @@
 # LangChain Question Answering Web Application
 
-This web application uses ideas and code from the [LangChain - Develop LLM powered applications with LangChain](https://www.udemy.com/course/langchain/) Udemy course, with some adjustments made to the code. It answers questions about about your pdfs, and uses Pinecone as a vectorstore.
+This web application uses ideas and code from the [LangChain - Develop LLM powered applications with LangChain](https://www.udemy.com/course/langchain/) Udemy course, with some adjustments made to the code. It answers questions about your PDFs, and uses Pinecone as a vectorstore.
 
 ## Run Locally
 
@@ -40,9 +40,17 @@ To run the application locally, follow these steps:
    OPENAI_API_KEY=<your_key>
    ```
 
-   You also need to replace `INDEX_NAME` in `const.py` with your Pinecone Index Name.
+6. Create a Pinecone account at [https://www.pinecone.io/](https://www.pinecone.io/), if you haven't already.
 
-6. Run the application:
+7. Create a new index in Pinecone with the following settings:
+
+   - Name: Replace `INDEX_NAME` in `const.py` with your chosen name for the index.
+   - Dimension: `1536`
+   - Distance: `euclidean`
+
+8. Update `INDEX_NAME` in `const.py` with your Pinecone Index Name.
+
+9. Run the application:
 
    ```
    python app.py
