@@ -1,4 +1,10 @@
-tbd/identified problems: current chain returns only 4 text blocks, which is suboptimal for some UCs, e.g. searching and Q&A of receipts, update readme - add pypdf, tiktoken to requirements accordingly, include run ingestion.py & further readme testing, containerization
+tbd/identified problems: 
+- current chain returns only 4 text blocks, which is suboptimal for some UCs, e.g. searching and Q&A of receipts, update readme 
+- add pypdf, tiktoken to requirements accordingly
+- include run ingestion.py 
+- further readme testing
+- containerization
+
 # LangChain Question Answering Web Application
 
 This web application uses ideas and code from the [LangChain - Develop LLM powered applications with LangChain](https://www.udemy.com/course/langchain/) Udemy course, with some adjustments made to the code. It answers questions about your PDFs, and uses Pinecone as a vectorstore.
