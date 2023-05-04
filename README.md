@@ -60,11 +60,11 @@ To run the application locally, follow these steps:
 
     ```
     PINECONE_API_KEY=<your pinecone api key>
-    PINECONE_ENVIRONMENT_REGION=<your pinecone environment region>
+    PINECONE_ENVIRONMENT_REGION=<your pinecone environment>
     OPENAI_API_KEY=<your openai api key>
     ```
 
-    Replace `<your pinecone api key>`, `<your pinecone environment region>`, and `<your openai api key>` with the respective values.
+    Replace `<your pinecone api key>`, `<your pinecone environment>` (The environment region, it´s "asia-northeast1-gcp" in my case.), and `<your openai api key>` with the respective values.
 
     After creating the `.env` file, reactivate the environment:
 
