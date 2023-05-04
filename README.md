@@ -53,7 +53,7 @@ To run the application locally, follow these steps:
 10. Create an OpenAI API key by following these steps:
 
     - Go to [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)
-    - Click on the "Generate API Key" button
+    - Click on the "Generate New API Key" button
     - Copy the generated API key
 
 11. Set the following environment variables in your `.env` file:
@@ -68,6 +68,21 @@ To run the application locally, follow these steps:
     PINECONE_API_KEY=<your_key>
     PINECONE_ENVIRONMENT_REGION=<your_region>
     OPENAI_API_KEY=<your_key>
+    ```
+
+    After setting the environment variables, reactivate the environment:
+
+    ```
+    conda deactivate
+    conda activate langchain-qa
+    ```
+
+    You can confirm that the environment variables are set correctly by running the following commands:
+
+    ```
+    echo $PINECONE_API_KEY
+    echo $PINECONE_ENVIRONMENT_REGION
+    echo $OPENAI_API_KEY
     ```
 
 12. Run the application:
