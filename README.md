@@ -1,4 +1,4 @@
-tbd: update readme - include run ingestion.py & further readme testing, containerization
+tbd: update readme - add pypdf, tiktoken to requirements accordingly, include run ingestion.py & further readme testing, containerization
 # LangChain Question Answering Web Application
 
 This web application uses ideas and code from the [LangChain - Develop LLM powered applications with LangChain](https://www.udemy.com/course/langchain/) Udemy course, with some adjustments made to the code. It answers questions about your PDFs, and uses Pinecone as a vectorstore.
