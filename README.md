@@ -86,3 +86,7 @@ To run the application locally, follow these steps:
 ## Application Screenshot
 
 ![Application Screenshot](https://github.com/SinaRampe/multiple_pdf_chatbot/blob/main/pics/app.png)
+
+## TBD (Backlog)
+
+- The `PyPDFLoader` class from `document_loaders` can load PDFs and split them into a list of documents, where each document contains the page content and metadata with the page number. Add functionality to display the page number in the source.
