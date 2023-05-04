@@ -81,7 +81,7 @@ To run the application locally, follow these steps:
     echo $OPENAI_API_KEY
     ```
 
-12. The user may change the chat model in `backend/retrieval_qa_chain.py` by changing the following code:
+12. You can change the chat model in `backend/retrieval_qa_chain.py` by changing the following code:
 
     ```
     chat = ChatOpenAI(
@@ -90,7 +90,7 @@ To run the application locally, follow these steps:
     )
     ```
 
-    The `temperature` parameter controls the randomness of the responses. Higher values result in more random and surprising responses. Other parameters that may be changed include `max_tokens` (maximum length of the response), `stop` (stop sequence for the response generation), and `frequency`.
+    The `temperature` parameter controls the randomness of the responses. Higher values result in more random and surprising responses. If you don't have access to the GPT-4 API, it's recommended to modify the model_name to "gpt-3.5-turbo". Although GPT-4 is more intelligent than GPT-3.5, and can handle longer prompts and conversations while making fewer factual errors, it has hourly prompt restrictions. On the other hand, GPT-3.5 is faster in generating responses and doesn't have these restrictions.`.
 
 13. Run the application:
 
