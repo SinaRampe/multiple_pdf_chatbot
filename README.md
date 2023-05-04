@@ -48,17 +48,33 @@ To run the application locally, follow these steps:
 
 8. Update `INDEX_NAME` in `const.py` with your Pinecone Index Name.
 
-9. Set the following environment variables in your `.env` file:
+9. If you haven't already, create an OpenAI account at [https://openai.com/](https://openai.com/).
 
-   - `PINECONE_API_KEY`
-   - `PINECONE_ENVIRONMENT_REGION`
-   - `OPENAI_API_KEY`
+10. Create an OpenAI API key by following these steps:
 
-10. Run the application:
+    - Go to [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)
+    - Click on the "Generate API Key" button
+    - Copy the generated API key
 
-   ```
-   python app.py
-   ```
+11. Set the following environment variables in your `.env` file:
+
+    - `PINECONE_API_KEY`
+    - `PINECONE_ENVIRONMENT_REGION`
+    - `OPENAI_API_KEY`
+
+    You can create a `.env` file in the root directory of the project and add the variables in the following format:
+
+    ```
+    PINECONE_API_KEY=<your_key>
+    PINECONE_ENVIRONMENT_REGION=<your_region>
+    OPENAI_API_KEY=<your_key>
+    ```
+
+12. Run the application:
+
+    ```
+    python app.py
+    ```
 
 ## Application Screenshot
 
