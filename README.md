@@ -70,21 +70,21 @@ To run the application locally, follow these steps:
    conda env config vars set PINECONE_API_KEY=<your pinecone api key>
    conda env config vars set PINECONE_ENVIRONMENT=<your pinecone environment>
    ```
+   
+   Reactivate the environment:
 
-    Reactivate the environment:
+   ```
+   conda deactivate
+   conda activate langchain-qa
+   ```
 
-    ```
-    conda deactivate
-    conda activate langchain-qa
-    ```
+   You can confirm that the environment variables are set correctly by running the following commands:
 
-    You can confirm that the environment variables are set correctly by running the following commands:
-
-    ```
-    echo $PINECONE_API_KEY
-    echo $PINECONE_ENVIRONMENT
-    echo $OPENAI_API_KEY
-    ```
+   ```
+   echo $PINECONE_API_KEY
+   echo $PINECONE_ENVIRONMENT
+   echo $OPENAI_API_KEY
+   ```
 
 12. The user may change the chat model in `backend/retrieval_qa_chain.py` by changing the following code:
 
