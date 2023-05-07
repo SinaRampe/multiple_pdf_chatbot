@@ -1,6 +1,5 @@
 tbd/identified problems: 
 - current chain returns only 4 text blocks, which is suboptimal for some UCs, e.g. searching and Q&A of receipts
-- README-update: include run ingestion.py 
 - further readme testing
 - containerization
 
