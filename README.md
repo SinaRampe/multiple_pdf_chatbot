@@ -63,17 +63,16 @@ To run the application locally, follow these steps:
     - Click on the "Generate New API Key" button
     - Copy the generated API key
 
-11. Create a `.env` file in the root directory of the project with the following content:
+11. Set your keys in the conda environment. Excecute the following commands in your shell, replace `<your pinecone api key>`, `<your pinecone environment region>`, and `<your openai api key>` with the respective values.
 
     ```
-    PINECONE_API_KEY=<your pinecone api key>
-    PINECONE_ENVIRONMENT_REGION=<your pinecone environment region>
-    OPENAI_API_KEY=<your openai api key>
+   conda env config vars set OPENAI_API_KEY=<your openai api key>
+   conda env config vars set PINECONE_API_KEY=<your pinecone api key>
+   conda env config vars set PINECONE_ENVIRONMENT=<your pinecone environment>
+    
     ```
 
-    Replace `<your pinecone api key>`, `<your pinecone environment region>`, and `<your openai api key>` with the respective values.
-
-    After creating the `.env` file, reactivate the environment:
+    Reactivate the environment:
 
     ```
     conda deactivate
@@ -84,7 +83,7 @@ To run the application locally, follow these steps:
 
     ```
     echo $PINECONE_API_KEY
-    echo $PINECONE_ENVIRONMENT_REGION
+    echo $PINECONE_ENVIRONMENT
     echo $OPENAI_API_KEY
     ```
 
