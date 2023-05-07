@@ -4,8 +4,6 @@ from backend.retrieval_qa_chain import run_llm
 import streamlit as st
 from streamlit_chat import message
 
-import os
-
 
 def create_sources_string(source_urls: Set[str]) -> str:
     if not source_urls:
