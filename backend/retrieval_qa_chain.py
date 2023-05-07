@@ -11,7 +11,7 @@ from consts import INDEX_NAME
 
 pinecone.init(
     api_key=os.environ["PINECONE_API_KEY"],
-    environment=os.environ["PINECONE_ENVIRONMENT_REGION"],
+    environment=os.environ["PINECONE_ENVIRONMENT"],
 )
 
 
