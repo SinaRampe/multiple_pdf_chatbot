@@ -1,6 +1,5 @@
 tbd/identified problems: 
 - current chain returns only 4 text blocks, which is suboptimal for some UCs, e.g. searching and Q&A of receipts
-- add pypdf, tiktoken to requirements accordingly
 - README-update: include run ingestion.py 
 - further readme testing
 - containerization
@@ -100,7 +99,15 @@ To run the application locally, follow these steps:
     The `temperature` parameter controls the randomness of the responses. Higher values result in more random and surprising responses. Other parameters that may be changed include `max_tokens` (maximum length of the response). More available parameters and what they do can be read in the [OpenAI API reference for completions](https://platform.openai.com/docs/api-reference/completions).
 
 
-13. Run the application:
+13. Convert documents to vectors and save them in Pinecone.
+
+    Run:
+
+    ```
+    python3 ingestion.py
+    ```
+
+14. Run the application:
 
     ```
     streamlit run main.py
