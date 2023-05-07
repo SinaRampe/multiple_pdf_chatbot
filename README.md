@@ -65,12 +65,11 @@ To run the application locally, follow these steps:
 
 11. Set your keys in the conda environment. Excecute the following commands in your shell, replace `<your pinecone api key>`, `<your pinecone environment region>`, and `<your openai api key>` with the respective values.
 
-    ```
+   ```
    conda env config vars set OPENAI_API_KEY=<your openai api key>
    conda env config vars set PINECONE_API_KEY=<your pinecone api key>
    conda env config vars set PINECONE_ENVIRONMENT=<your pinecone environment>
-    
-    ```
+   ```
 
     Reactivate the environment:
 
