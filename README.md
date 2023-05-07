@@ -97,7 +97,10 @@ To run the application locally, follow these steps:
     )
     ```
 
-    The `temperature` parameter controls the randomness of the responses. Higher values result in more random and surprising responses. Other parameters that may be changed include `max_tokens` (maximum length of the response), `stop` (stop sequence for the response generation), and `frequency`.
+    The available OpenAI models can be found in the [OpenAI API documentation](https://platform.openai.com/docs/models). If no OpenAI GPT-4 API access is given, the user should change `model_name` to `"gpt-3.5-turbo"`. GPT-3.5 is faster in generating responses and doesn't come with the hourly prompt restrictions GPT-4 does. GPT-4 is smarter, can handle longer prompts and conversations, and doesn't make as many factual errors.  
+
+    The `temperature` parameter controls the randomness of the responses. Higher values result in more random and surprising responses. Other parameters that may be changed include `max_tokens` (maximum length of the response). More available parameters and what they do can be read in the [OpenAI API reference for completions](https://platform.openai.com/docs/api-reference/completions).
+
 
 13. Run the application:
 
