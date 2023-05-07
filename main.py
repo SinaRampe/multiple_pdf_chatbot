@@ -4,6 +4,8 @@ from backend.retrieval_qa_chain import run_llm
 import streamlit as st
 from streamlit_chat import message
 
+import os
+
 
 def create_sources_string(source_urls: Set[str]) -> str:
     if not source_urls:
@@ -14,7 +16,6 @@ def create_sources_string(source_urls: Set[str]) -> str:
     for i, source in enumerate(sources_list):
         sources_string += f"{i+1}. {source}\n"
     return sources_string
-
 
 st.header("GPT-4 Q&A over multiple pdf files 🤓 📚")
 if (
