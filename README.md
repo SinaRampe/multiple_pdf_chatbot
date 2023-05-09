@@ -1,10 +1,3 @@
-tbd/identified problems: 
-- improve frontend, example: [defidocbot](https://defidocbot.streamlit.app/)
-- latest question should be inserted at the top, history appears at the bottom -> see [Chat With Your Healthcare Documents: Build a Chatbot With ChatGPT and LangChain](https://pub.towardsai.net/chat-with-your-healthcare-documents-build-a-chatbot-with-chatgpt-and-langchain-6b910eb6ca14)
-- current chain returns only 4 text blocks, which is suboptimal for some UCs, e.g. searching and Q&A of receipts
-- further readme testing
-- containerization
-
 # LangChain Question Answering Web Application
 
 This web application uses ideas and code from the [LangChain - Develop LLM powered applications with LangChain](https://www.udemy.com/course/langchain/) Udemy course, with some adjustments made to the code. It answers questions about your PDFs, and uses Pinecone as a vectorstore.
@@ -121,3 +114,9 @@ To run the application locally, follow these steps:
 ## TBD (Backlog)
 
 - The PyPDFLoader class from document_loaders can load PDFs and split them into a list of documents, where each document contains the page content and metadata with the page number. Add functionality to display the page number in the source.
+- tbd/identified problems: 
+- improve frontend, example: [defidocbot](https://defidocbot.streamlit.app/)
+- latest question should be inserted at the top, history appears at the bottom -> see [Chat With Your Healthcare Documents: Build a Chatbot With ChatGPT and LangChain](https://pub.towardsai.net/chat-with-your-healthcare-documents-build-a-chatbot-with-chatgpt-and-langchain-6b910eb6ca14)
+- current chain returns only 4 text blocks, which is suboptimal for some UCs, e.g. searching and Q&A of receipts
+- further readme testing
+- containerization
