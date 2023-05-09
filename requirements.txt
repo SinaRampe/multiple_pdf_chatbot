@@ -1,6 +1,7 @@
 langchain
 pypdf
 openai
+tiktoken
 pinecone_client==2.2.1
 streamlit==1.22.0
 streamlit_chat==0.0.2.2
