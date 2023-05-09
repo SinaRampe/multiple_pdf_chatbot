@@ -1,4 +1,5 @@
 tbd/identified problems: 
+- improve frontend, example: [defidocbot](https://defidocbot.streamlit.app/)
 - latest question should be inserted at the top, history appears at the bottom -> see [Chat With Your Healthcare Documents: Build a Chatbot With ChatGPT and LangChain](https://pub.towardsai.net/chat-with-your-healthcare-documents-build-a-chatbot-with-chatgpt-and-langchain-6b910eb6ca14)
 - current chain returns only 4 text blocks, which is suboptimal for some UCs, e.g. searching and Q&A of receipts
 - further readme testing
