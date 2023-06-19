@@ -1,1 +1,1 @@
-INDEX_NAME="multiple-pdf-chatbot"
+INDEX_NAME="msfdocs"

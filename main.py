@@ -15,7 +15,7 @@ def create_sources_string(source_urls: Set[str]) -> str:
         sources_string += f"{i+1}. {source}\n"
     return sources_string
 
-st.header("GPT-4 Q&A over multiple pdf files 🤓 📚")
+st.header("ChatGPT Q&A over MSF Clinical Guidelines & Essential Drug List")
 if (
     "chat_answers_history" not in st.session_state
     and "user_prompt_history" not in st.session_state
@@ -26,7 +26,7 @@ if (
     st.session_state["chat_history"] = []
 
 
-prompt = st.text_input("Prompt", placeholder="Enter your message here...") or st.button(
+prompt = st.text_area("Prompt", placeholder="Enter your message here...") or st.button(
     "Submit"
 )
 
@@ -49,8 +49,8 @@ if prompt:
 
 if st.session_state["chat_answers_history"]:
     for generated_response, user_query in zip(
-        st.session_state["chat_answers_history"],
-        st.session_state["user_prompt_history"],
+            reversed(st.session_state["chat_answers_history"]),
+            reversed(st.session_state["user_prompt_history"]),
     ):
         message(
             user_query,

@@ -23,7 +23,7 @@ def run_llm(query: str, chat_history: List[Dict[str, Any]] = []):
     )
     chat = ChatOpenAI(
         temperature=0,
-        model_name="gpt-4"
+        model_name="gpt-3.5-turbo"
     )
 
     qa = ConversationalRetrievalChain.from_llm(
