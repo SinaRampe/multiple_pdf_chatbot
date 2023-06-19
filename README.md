@@ -30,7 +30,7 @@ Before running the application, make sure you have Docker installed on your syst
 
 2. Customization:
 
-The user may change the chat model in `backend/retrieval_qa_chain.py` by changing the following code:
+You can customize the chat model in `backend/retrieval_qa_chain.py` by changing the following code:
 
     ```
     chat = ChatOpenAI(
