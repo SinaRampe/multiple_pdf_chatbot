@@ -69,7 +69,7 @@ docker build -t msf_chatbot .
 docker run -p 8501:8501 msf_chatbot
  ```
 
-Then navigate to [http://localhost:8501] (http://localhost:8501) in your browser to use the application.
+Then navigate to [http://localhost:8501](http://localhost:8501) in your browser to use the application.
 
 
 
