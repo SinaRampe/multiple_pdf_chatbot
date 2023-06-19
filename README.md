@@ -32,48 +32,46 @@ Before running the application, make sure you have Docker installed on your syst
 
 You can customize the chat model in `backend/retrieval_qa_chain.py` by changing the following code:
 
-    ```
-    chat = ChatOpenAI(
-            temperature=0,
-            model_name="gpt-4"
+   ```
+  chat = ChatOpenAI(
+          temperature=0,
+          model_name="gpt-4"
     )
-    ```
+   ```
 
-    The available OpenAI models can be found in the [OpenAI API documentation](https://platform.openai.com/docs/models). If no OpenAI GPT-4 API access is given, the user should change `model_name` to `"gpt-3.5-turbo"`. GPT-3.5 is faster in generating responses and doesn't come with the hourly prompt restrictions GPT-4 does. GPT-4 is smarter, can handle longer prompts and conversations, and doesn't make as many factual errors.  
+The available OpenAI models can be found in the [OpenAI API documentation](https://platform.openai.com/docs/models). If no OpenAI GPT-4 API access is given, the user should change `model_name` to `"gpt-3.5-turbo"`. GPT-3.5 is faster in generating responses and doesn't come with the hourly prompt restrictions GPT-4 does. GPT-4 is smarter, can handle longer prompts and conversations, and doesn't make as many factual errors.  
 
-    The `temperature` parameter controls the randomness of the responses. Higher values result in more random and surprising responses. Other parameters that may be changed include `max_tokens` (maximum length of the response). More available parameters and what they do can be read in the [OpenAI API reference for completions](https://platform.openai.com/docs/api-reference/completions).
+The `temperature` parameter controls the randomness of the responses. Higher values result in more random and surprising responses. Other parameters that may be changed include `max_tokens` (maximum length of the response). More available parameters and what they do can be read in the [OpenAI API reference for completions](https://platform.openai.com/docs/api-reference/completions).
 
 3. Go to the project directory:
 
-   ```
+ ```
 cd multiple_pdf_chatbot
-   ```
+ ```
 
 4. Create a .env file in the project directory with the following environment variables:
 
-   ```
+ ```
 OPENAI_API_KEY=<your_openai_api_key>
 PINECONE_API_KEY=<your_pinecone_api_key>
 PINECONE_ENVIRONMENT=<your_pinecone_environment>
-   ```
+ ```
 
 5. Build the Docker image:
 
-   ```
+ ```
 docker build -t msf_chatbot .
-   ```
+ ```
 
 6. To run the application, execute the following command:
 
-   ```
+ ```
 docker run -p 8501:8501 msf_chatbot
-   ```
+ ```
 
 Then navigate to [http://localhost:8501] (http://localhost:8501) in your browser to use the application.
 
-## Application Screenshot
 
-![Application Screenshot](https://github.com/SinaRampe/multiple_pdf_chatbot/blob/main/pics/app.png)
 
 ## TBD (Backlog)
 
